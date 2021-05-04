@@ -57,6 +57,7 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [],
       },
+      base: '/',
     }),
   ],
   resolve: {

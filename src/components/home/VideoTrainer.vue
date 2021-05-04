@@ -1,10 +1,10 @@
 <template>
   <Transition :css="false" @enter="enter">
-    <div class="flex overflow-hidden items-center" v-if="show && trending?.videos" ref="el">
+    <div v-if="show && trending?.videos" class="flex overflow-hidden items-center">
       <div
-        class="border-white rounded-full flex border-2 overflow-hidden justify-center hidden video__item"
         v-for="(video, key) of trending?.videos"
         :key="video.id"
+        class="border-white rounded-full flex border-2 overflow-hidden justify-center hidden video__item"
       >
         <Image
           :alt="trending.show"
@@ -17,22 +17,22 @@
   </Transition>
 </template>
 <script lang="ts" setup>
-import { computed, nextTick, ref } from 'vue';
-import { useStore } from 'vuex';
+import { computed, nextTick, ref } from 'vue'
+import { useStore } from 'vuex'
 
-import { Trending } from '@/types/trending';
-import { useAnime } from '@/components/home/util';
+import { Trending } from '@/types/trending'
+import { useAnime } from '@/components/home/util'
 
-const show = ref(false);
-const store = useStore();
-const trending = computed(() => store.getters['trending/selected'] as Trending);
+const show = ref(false)
+const store = useStore()
+const trending = computed(() => store.getters['trending/selected'] as Trending)
 
 const { enter } = useAnime({
   keyframes: [
     { translateX: 40 }, { translateX: 0 },
   ],
   delay: (_, i) => 1000 * i,
-}, el => el.querySelectorAll('div'));
+}, el => el.querySelectorAll('div'))
 
 nextTick(() => show.value = !show.value)
 </script>

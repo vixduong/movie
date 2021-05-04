@@ -12,10 +12,10 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeMount } from 'vue';
-import { useStore } from 'vuex';
+import { onBeforeMount } from 'vue'
+import { useStore } from 'vuex'
 
-const store = useStore();
-const getConfig = async () => store.dispatch('configuration/get', {});
-onBeforeMount(async () => await getConfig());
+const store = useStore()
+const getConfig = async() => store.dispatch('configuration/get', {})
+onBeforeMount(async() => await getConfig())
 </script>

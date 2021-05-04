@@ -8,9 +8,9 @@
 
     <FullScreen class="flex justify-center">
       <div class="flex h-full space-x-4 text-white w-full max-w-70 text-7xl items-center justify-center sm:max-w-100">
-        <span >40</span>
+        <span>40</span>
         <span class="flex-1 relative line"></span>
-        <span >4</span>
+        <span>4</span>
       </div>
     </FullScreen>
   </FullScreen>

@@ -2,9 +2,9 @@ import anime from 'animejs';
 
 export const useAnime = (
   params: anime.AnimeParams,
-  fn: (el: HTMLElement) => HTMLElement[] | NodeListOf<HTMLElement> = (el) => [el]
+  fn: (el: Element) => Element[] | NodeListOf<Element> = (el) => [el]
 ) => {
-  const enter = (_el: HTMLElement, done: any) => {
+  const enter = (_el: Element, done: any) => {
     anime({
       targets: fn(_el),
       duration: 500,
@@ -15,13 +15,13 @@ export const useAnime = (
     });
   };
 
-  const leave = (_el: HTMLElement, done: any) => {
-    _el.style.opacity = '0';
+  const leave = (_el: Element, done: any) => {
+    (_el as HTMLElement).style.opacity = '0';
     done();
   };
 
-  const beforeEnter = (_el: HTMLElement, done: any) => {
-    _el.style.opacity = '0';
+  const beforeEnter = (_el: Element, done: any) => {
+    (_el as HTMLElement).style.opacity = '0';
     //done()
   };
 
