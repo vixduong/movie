@@ -81,3 +81,62 @@ jobs:
           yarn build
       - name: Lint
         run: yarn lint
+  merge: 
+    needs: build
+    if: github.actor == 'vixduong' ||  startsWith(github.actor, 'dependabot')
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: automerge
+        uses: "pascalgn/automerge-action@v0.13.1"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+  release: 
+    needs: merge
+    if: github.actor == 'vixduong' || startsWith(github.actor, 'dependabot')
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: contributor 
+        run: echo ::set-output name=release::minor
+        if: github.actor == 'vixduong'
+
+      - id: bot
+        run: echo ::set-output name=release::patch
+        if: startsWith(github.actor, 'dependabot')
+
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+  
+      - uses: phish108/autotag-action@1.1.37
+        id: tagger
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          bump: ${{ steps.contributor.outputs.release || steps.bot.outputs.release }}
+          dry-run: 'true'
+
+      - run: | 
+          npm --no-git-tag-version --allow-same-version version "${{ steps.tagger.outputs.new-tag }}"
+          git commit -m "version bump to ${{ steps.tagger.outputs.new-tag }}" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: phish108/autotag-action@1.1.37
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          bump: ${{ steps.contributor.outputs.release || steps.bot.outputs.release }}
+          with-v: true

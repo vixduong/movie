@@ -52,10 +52,11 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Movie',
         short_name: 'Movie',
         theme_color: '#ffffff',
         icons: [],
+        name: 'Weather: Do I need an umbrella?',
+        description: 'The Movie Database (TMDb) is a popular, user editable database for movies and TV shows.',
       },
       base: '/',
     }),

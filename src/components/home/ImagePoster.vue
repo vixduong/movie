@@ -7,7 +7,7 @@
       space="x-2"
     >
       <li
-        v-for="(item, index) of trending?.takeBackdropImages(3)"
+        v-for="(item, index) of trending?.takeBackdropImages?.(3)"
         :key="item.filePath"
         :class="[index === 0 ? 'w-24' : 'w-18', 'opacity-0']"
       >
