@@ -3,6 +3,7 @@ import plugin from 'windicss/plugin';
 
 export default defineConfig({
   darkMode: 'class',
+  attributify: true,
   theme: {
     colors: {
       red: '#FF0E39',

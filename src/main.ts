@@ -1,5 +1,6 @@
-import 'reflect-metadata';
-import 'virtual:windi.css';
+import 'reflect-metadata'
+import 'virtual:windi.css'
+import 'virtual:windi-devtools'
 import 'plyr/src/sass/plyr.scss'
 import '@splidejs/splide/dist/css/splide.min.css'
 

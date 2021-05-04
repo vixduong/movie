@@ -28,7 +28,7 @@ export default defineComponent({
     watch(
       () => [config.value.images, sizeImage.value, nameImage.value],
       ([images, size, name]) => {
-        const url = (images as ImageConfig)?.baseUrl ?? null
+        const url = (images as ImageConfig)?.secureBaseUrl ?? null
         if (!url || !size || !name) return;
         urlImage.value = `${url}${size}${name}`;
       },

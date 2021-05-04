@@ -3,7 +3,7 @@ import * as Either from 'fp-ts/Either';
 import * as TaskEither from 'fp-ts/TaskEither';
 
 import { plainToClass } from 'class-transformer';
-import { pipe } from 'fp-ts/pipeable';
+import { pipe } from 'fp-ts/function';
 
 const API_KEY = '47006fbffaf9eb3b1797f3d78a8a6322';
 const TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzAwNmZiZmZhZjllYjNiMTc5N2YzZDc4YThhNjMyMiIsInN1YiI6IjVjYjc0M2RkOTI1MTQxMDhjYmY1ZDMzNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HNtGTdRtwxj1ZuJwKdB5LeLY81LRO9Cnhh0CF1b4Ltk';

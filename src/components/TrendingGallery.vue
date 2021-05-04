@@ -1,15 +1,12 @@
 <template>
   <Gallery :items="items" :options="options" v-model="trending">
     <template v-slot:default="{ item }">
-      <Image
-        v-if="item"
-        :alt="item.show" :name-image="item.backdropPath"
-      ></Image>
+      <Image v-if="item" :alt="item.show" :name-image="item.backdropPath"></Image>
     </template>
   </Gallery>
 
   <FullScreen>
-    <Overview/>
+    <Overview />
   </FullScreen>
 
   <Modal>
@@ -20,9 +17,10 @@
     />
   </Modal>
 </template>
-<script lang="ts">
+
+<script lang="ts" setup>
 import { SplideOptions } from '@splidejs/splide';
-import { computed, defineAsyncComponent, defineComponent, ref, watch } from 'vue';
+import { computed, defineAsyncComponent, ref, watch } from 'vue';
 import { Trending } from '@/types/trending';
 import { useStore } from 'vuex';
 
@@ -34,34 +32,25 @@ const Overview = defineAsyncComponent(() => import('@/components/home/Overview.v
 const Modal = defineAsyncComponent(() => import('@/components/commons/Modal.vue'));
 const Player = defineAsyncComponent(() => import('@/components/commons/Player.vue'));
 
-export default defineComponent({
-  setup() {
-    const options = ref<SplideOptions>({
-      lazyLoad: 'nearby',
-      cover: true,
-      type: 'loop', autoplay: true, interval: 1000 * 1.1 * 60,
-      width: '100vw', height: '100vh',
-      classes: {
-        pagination: 'splide__pagination space-x-1.5',
-      },
-    });
-
-    const store = useStore();
-    const items = computed(() => store.getters['trending/trending'] as Array<Trending>);
-    const trending = ref<Trending>();
-
-    watch(() => trending.value, async (v) => {
-      if (!v) return;
-      await store.dispatch('trending/selected', v);
-      await store.dispatch('trending/media');
-      await store.dispatch('setting/union');
-    }, { immediate: true });
-
-    return {
-      items, trending,
-      options,
-    };
+const options = ref<SplideOptions>({
+  lazyLoad: 'nearby',
+  cover: true,
+  type: 'loop', autoplay: true, interval: 1000 * 100.1 * 60,
+  width: '100vw', height: '100vh',
+  classes: {
+    pagination: 'splide__pagination space-x-1.5',
   },
-  components: { Gallery, Image, Overview, Modal, Player, FullScreen }
 });
+
+const store = useStore();
+const items = computed(() => store.getters['trending/trending'] as Array<Trending>);
+const trending = ref<Trending>();
+
+watch(() => trending.value, async (v) => {
+  if (!v) return;
+  await store.dispatch('trending/selected', v);
+  await store.dispatch('trending/media');
+  await store.dispatch('setting/union');
+}, { immediate: true });
+
 </script>

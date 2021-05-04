@@ -1,6 +1,6 @@
 import { Type } from 'class-transformer';
 
-type KEY = "FR" | "US" |"AU" | "FI" | "PT" | "CA-QC" |
+type KEY = "FR" | "US" | "AU" | "FI" | "PT" | "CA-QC" |
   "IT" | "CA" | "IN" | "SE" | "NO" | "DE" | "MY" | "PH" |
   "NL" | "BG" | "HU" | "NZ" | "DK" | "LT" | "GB" | "BR" | "RU" | "ES"
 
