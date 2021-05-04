@@ -14,9 +14,6 @@ export default defineConfig({
     interFontFeatures: {
       numeric: ['tnum', 'salt', 'ss02']
     },
-    fontFamily: {
-      //sans: 'ui-sans-serif, system-ui, -apple-system, Montserrat, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-    },
     extend: {
       flex: {
         '1/2': '1 1 50%',
@@ -25,29 +22,14 @@ export default defineConfig({
     }
   },
   plugins: [
-    require('tailwindcss-font-inter')(),
+    require('tailwindcss-font-inter')({
+      importFontFace: false
+    }),
     require('windicss/plugin/typography'),
     require('windicss/plugin/forms'),
     require('windicss/plugin/line-clamp'),
     require('windicss/plugin/aspect-ratio'),
     require('windicss/plugin/scroll-snap'),
-    plugin(({ addUtilities }) => {
-      const utilities = {
-        '.with-w': {
-          width: 'var(--with-w, auto)',
-        },
-        '.with-h': {
-          height: 'var(--with-h, auto)',
-        },
-      };
-
-      addUtilities(utilities);
-    }),
-    plugin(({ addComponents }) => {
-      const components = {
-      };
-
-      addComponents(components);
-    }),
+    plugin(({ }) => {}),
   ],
 });
