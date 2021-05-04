@@ -9,12 +9,19 @@
   >
     <nav
       v-if="stateNavigation"
-      class="bg-gray h-screen bg-opacity-90 w-screen inset-0 z-50 absolute -sm:overflow-y-scroll"
+      bg="gray opacity-90"
+      h="screen"
+      w="screen"
+      position="inset-0 z-50 absolute"
+      overflow="-sm:y-scroll"
     >
-      <ul class="flex flex-col h-screen max-w--max space-y-5 py-16 pl-20 overflow-y-scroll scrollbar-hide">
+      <ul
+        class="flex flex-col h-screen max-w--max space-y-5 py-16 pl-20 overflow-y-scroll scrollbar-hide"
+      >
         <li
           class="text-black text-2xl text-opacity-80 relative link__item lowercase sm:text-4xl hover:(text-white)"
-          v-for="(link, i) in routers" :key="i"
+          v-for="(link, i) in routers"
+          :key="i"
         >
           <RouterLink :to="link?.href ?? '#'" active-class="text-white">{{ link?.name }}</RouterLink>
           <span
@@ -24,54 +31,47 @@
       </ul>
 
       <button
-        @click.prevent="toggleNavigation()" aria-label="close a nav"
+        @click.prevent="toggleNavigation()"
+        aria-label="close a nav"
         class="h-8 top-4 right-4 w-8 absolute hover:(bg-white bg-opacity-20 rounded-full) focus:(outline-none)"
       >
         <svg viewBox="0 0 24 24" class="stroke-white stroke-2">
-          <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"></path>
+          <path
+            d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"
+          />
         </svg>
       </button>
     </nav>
   </Transition>
 </template>
 
-<script lang="ts">
-import { computed, defineComponent, ref, watch } from 'vue';
+<script lang="ts" setup>
+import { computed, ref, watch } from 'vue';
 import { useStore } from 'vuex';
 import { useRoute } from 'vue-router';
 
-export default defineComponent({
-  setup() {
-    const routers = ref<Array<{ href: string, name: string }>>([
-      { href: '/', name: 'Home' },
-      { href: 'films', name: 'films' },
-      { href: 'serials', name: 'serials' },
-      { href: 'tv', name: 'tv' },
-      { href: 'search', name: 'search' },
-      { href: 'blog', name: 'blog' },
-      { href: 'subscriptions', name: 'subscriptions' },
-      { href: 'contacts', name: 'contacts' },
-      { href: 'shop', name: 'shop' },
-      { href: 'help-center', name: 'help center' },
-    ]);
+const routers = ref<Array<{ href: string, name: string }>>([
+  { href: '/', name: 'Home' },
+  { href: 'films', name: 'films' },
+  { href: 'serials', name: 'serials' },
+  { href: 'tv', name: 'tv' },
+  { href: 'search', name: 'search' },
+  { href: 'blog', name: 'blog' },
+  { href: 'subscriptions', name: 'subscriptions' },
+  { href: 'contacts', name: 'contacts' },
+  { href: 'shop', name: 'shop' },
+  { href: 'help-center', name: 'help center' },
+]);
 
-    const store = useStore();
-    const navigation = computed(() => store.getters['setting/activeNavigation'] as boolean);
-    const toggleNavigation = () => store.dispatch('setting/toggleNavigation', {});
-    const stateNavigation = ref(false);
-    watch(() => navigation.value, v => stateNavigation.value = v);
+const store = useStore();
+const navigation = computed(() => store.getters['setting/activeNavigation'] as boolean);
+const toggleNavigation = () => store.dispatch('setting/toggleNavigation', {});
+const stateNavigation = ref(false);
+watch(() => navigation.value, v => stateNavigation.value = v);
 
-    const route = useRoute()
+const route = useRoute()
 
-    watch(() => route.path, (o, n) => stateNavigation.value = !stateNavigation.value && o !== n)
-
-    return {
-      routers,
-      stateNavigation, toggleNavigation,
-    };
-  }
-});
-
+watch(() => route.path, (o, n) => stateNavigation.value = !stateNavigation.value && o !== n)
 </script>
 
 <style lang="scss" scoped>

@@ -1,30 +1,21 @@
 <template>
-  <div class="flex flex-col font-inter text-white relative">
+  <div position="relative" font="inter" text="white" flex="~ col">
     <!--  header  -->
-    <Header/>
+    <Header />
     <!--  navigation  -->
-    <Navigation/>
+    <Navigation />
     <!--  main  -->
     <main>
-      <RouterView/>
+      <RouterView />
     </main>
   </div>
 </template>
 
-<script lang="ts">
-import { defineAsyncComponent, defineComponent, onBeforeMount } from 'vue';
+<script lang="ts" setup>
+import { onBeforeMount } from 'vue';
 import { useStore } from 'vuex';
 
-import Header from '@/components/Header.vue';
-
-const Navigation = defineAsyncComponent(() => import('@/components/Navigation.vue'));
-
-export default defineComponent({
-  setup() {
-    const store = useStore();
-    const getConfig = async () => store.dispatch('configuration/get', {});
-    onBeforeMount(async () => await getConfig());
-  },
-  components: { Header, Navigation, },
-});
+const store = useStore();
+const getConfig = async () => store.dispatch('configuration/get', {});
+onBeforeMount(async () => await getConfig());
 </script>

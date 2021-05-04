@@ -15,13 +15,7 @@
     </FullScreen>
   </FullScreen>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue';
-import FullScreen from '@/components/commons/FullScreen.vue';
-
-export default defineComponent({
-  components: { FullScreen }
-});
+<script lang="ts" setup>
 </script>
 
 <style lang="scss" scoped>

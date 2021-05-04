@@ -5,7 +5,7 @@
     :style="[`--tw-aspect-w: ${width ?? 16}`, `--tw-aspect-h: ${height ?? 9}`]"
   >
     <img
-      :src="urlImage" :alt="alt"
+      v-lazy="urlImage" :alt="alt"
       :width="width" :height="height"
       class="object-cover"
     >

@@ -4,7 +4,7 @@
   "scripts": {
     "serve": "vite preview",
     "build": "vite build",
-    "dev": "vite --open"
+    "dev": "vite"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -38,6 +38,12 @@
     "tailwindcss-font-inter": "^2.0.5",
     "typescript": "^4.2.4",
     "vite": "^2.2.4",
+    "vite-plugin-components": "^0.8.4",
+    "vite-plugin-icons": "^0.5.0",
+    "vite-plugin-md": "^0.6.3",
+    "vite-plugin-pages": "^0.10.0",
+    "vite-plugin-pwa": "^0.7.3",
+    "vite-plugin-vue-layouts": "^0.2.2",
     "vite-plugin-windicss": "^0.16.0-beta.8",
     "vue-cli-plugin-vuetify": "~2.3.1",
     "vue-tsc": "^0.0.8",

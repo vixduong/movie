@@ -1,7 +1,7 @@
 <template>
   <Gallery :items="items" :options="options" v-model="trending">
     <template v-slot:default="{ item }">
-      <Image v-if="item" :alt="item.show" :name-image="item.backdropPath"></Image>
+      <ImageGallery v-if="item" :alt="item.show" :name-image="item.backdropPath"></ImageGallery>
     </template>
   </Gallery>
 
@@ -19,12 +19,12 @@
 </template>
 
 <script lang="ts" setup>
-import { SplideOptions } from '@splidejs/splide';
+import type { SplideOptions } from '@splidejs/splide';
 import { computed, defineAsyncComponent, ref, watch } from 'vue';
 import { Trending } from '@/types/trending';
 import { useStore } from 'vuex';
 
-import Image from '@/components/commons/ImageGallery.vue';
+import ImageGallery from '@/components/commons/Image.vue';
 import FullScreen from '@/components/commons/FullScreen.vue';
 
 const Gallery = defineAsyncComponent(() => import('@/components/commons/Gallery.vue'));

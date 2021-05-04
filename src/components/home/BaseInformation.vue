@@ -2,14 +2,14 @@
   <Transition
     :css="false" @enter="enterOverview"
   >
-    <div v-if="show" class="flex justify-end opacity-0">
+    <div v-if="show" class="flex opacity-0 justify-end">
       <p class="w-7/10 prose-lg prose-white overflow-hidden line-clamp-4">{{ trending?.overview }}</p>
     </div>
   </Transition>
 
   <Transition :css="false" @enter="enterName">
-    <div v-if="show" class="prose-2xl opacity-0">
-      <h2 class="font-bold text-right text-9xl uppercase prose-white">{{ trending?.show }}</h2>
+    <div v-if="show" class="opacity-0 prose-2xl">
+      <h2 class="font-bold text-right text-9xl uppercase prose-white line-clamp-2">{{ trending?.show }}</h2>
     </div>
   </Transition>
 
