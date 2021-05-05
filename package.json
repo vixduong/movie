@@ -8,11 +8,6 @@
     "lint": "npx eslint --ext .js,.json,.vue --fix .",
     "prepare": "husky install"
   },
-  "husky": {
-    "gitHooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@mdi/font": "5.9.55",
     "@splidejs/splide": "^2.4.21",
