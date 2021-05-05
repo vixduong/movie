@@ -1,56 +1,69 @@
-import { Company } from '@/types/company';
-import { Country } from '@/types/country';
-import { Language } from '@/types/language';
-import { Genre } from '@/types/genre';
-import { Expose, Type } from 'class-transformer';
-import { Season } from '@/types/season';
+import { Company } from '@/types/company'
+import { Country } from '@/types/country'
+import { Language } from '@/types/language'
+import { Genre } from '@/types/genre'
+import { Expose, Type } from 'class-transformer'
+import { Season } from '@/types/season'
 
 export class Detail {
-  adult: boolean;
+  adult: boolean
   @Expose({ name: 'backdrop_path' })
-  backdropPath: string;
+  backdropPath: string
+
   @Expose({ name: 'belongs_to_collection' })
-  belongsToCollection: null;
-  budget: number;
+  belongsToCollection: null
+
+  budget: number
   @Type(() => Genre)
-  genres: Genre[];
-  homepage: string;
-  id: number;
+  genres: Genre[]
+
+  homepage: string
+  id: number
   @Expose({ name: 'imdb_id' })
-  imdbId: string;
+  imdbId: string
+
   @Expose({ name: 'original_language' })
-  originalLanguage: string;
+  originalLanguage: string
+
   @Expose({ name: 'original_title' })
-  originalTitle: string;
-  overview: string;
-  popularity: number;
+  originalTitle: string
+
+  overview: string
+  popularity: number
   @Expose({ name: 'poster_path' })
-  posterPath: string;
+  posterPath: string
+
   @Type(() => Company)
   @Expose({ name: 'production_companies' })
-  productionCompanies: Company[];
+  productionCompanies: Company[]
+
   @Type(() => Country)
   @Expose({ name: 'production_countries' })
-  productionCountries: Country[];
+  productionCountries: Country[]
+
   @Type(() => Country)
-  networks: Country[];
+  networks: Country[]
+
   @Type(() => Date)
   @Expose({ name: 'release_date' })
-  releaseDate: Date;
-  revenue: number;
-  runtime: number;
+  releaseDate: Date
+
+  revenue: number
+  runtime: number
   @Type(() => Language)
   @Expose({ name: 'spoken_languages' })
-  spokenLanguages: Language[];
-  status: string;
-  tagline: string;
-  title: string;
-  video: boolean;
-  @Expose({ name: 'vote_average' })
-  voteAverage: number;
-  @Expose({ name: 'vote_count' })
-  voteCount: number;
-  @Type(() => Season)
-  seasons: Season[];
-}
+  spokenLanguages: Language[]
 
+  status: string
+  tagline: string
+  title: string
+  video: boolean
+  @Expose({ name: 'vote_average' })
+  voteAverage: number
+
+  @Expose({ name: 'vote_count' })
+  voteCount: number
+
+  @Type(() => Season)
+  seasons: Season[]
+}

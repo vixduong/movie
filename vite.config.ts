@@ -1,14 +1,13 @@
-import { defineConfig } from 'vite';
-import Vue from '@vitejs/plugin-vue';
-import WindiCSS from 'vite-plugin-windicss';
-import * as path from 'path';
+import * as path from 'path'
+import { defineConfig } from 'vite'
+import Vue from '@vitejs/plugin-vue'
+import WindiCSS from 'vite-plugin-windicss'
 
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 // import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
 import { VitePWA } from 'vite-plugin-pwa'
-
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -41,7 +40,7 @@ export default defineConfig({
     }),
 
     // https://github.com/antfu/vite-plugin-icons
-    //ViteIcons(),
+    // ViteIcons(),
 
     // https://github.com/antfu/vite-plugin-windicss
     WindiCSS({
@@ -72,4 +71,4 @@ export default defineConfig({
       'vue-router',
     ],
   },
-});
+})

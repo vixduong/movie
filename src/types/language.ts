@@ -1,9 +1,11 @@
-import { Expose } from 'class-transformer';
+import { Expose } from 'class-transformer'
 
 export class Language {
   @Expose({ name: 'iso_3166_1' })
-  iso!: string;
+  iso!: string
+
   @Expose({ name: 'english_name' })
-  englishName!: string;
-  name:         string;
+  englishName!: string
+
+  name: string
 }

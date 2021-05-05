@@ -1,10 +1,11 @@
-import { Type } from 'class-transformer';
-import { Image } from '@/types/image';
+import { Type } from 'class-transformer'
+import { Image } from '@/types/image'
 
 export class ImageResponse {
-  id: number;
+  id: number
   @Type(() => Image)
-  backdrops: Image[];
+  backdrops: Image[]
+
   @Type(() => Image)
-  posters: Image[];
+  posters: Image[]
 }

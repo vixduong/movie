@@ -5,7 +5,7 @@
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
-    "lint": "npx eslint --ext .js,.json,.vue --fix .",
+    "lint": "npx eslint --ext .js,.ts,.json,.vue --fix .",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -36,6 +36,7 @@
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.11",
     "eslint": "^7.25.0",
+    "husky": "^6.0.0",
     "sass": "^1.32.12",
     "sass-loader": "^10.1.1",
     "tailwindcss-font-inter": "^2.0.5",
@@ -50,7 +51,6 @@
     "vite-plugin-windicss": "^0.16.0-beta.8",
     "vue-cli-plugin-vuetify": "~2.3.1",
     "vue-tsc": "^0.0.8",
-    "windicss": "^3.0.0-beta.5",
-    "husky": "^6.0.0"
+    "windicss": "^3.0.0-beta.5"
   }
 }
