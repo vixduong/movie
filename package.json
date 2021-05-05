@@ -5,7 +5,13 @@
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
-    "lint": "npx eslint --ext .js,.json,.vue --fix ."
+    "lint": "npx eslint --ext .js,.json,.vue --fix .",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "gitHooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -49,6 +55,7 @@
     "vite-plugin-windicss": "^0.16.0-beta.8",
     "vue-cli-plugin-vuetify": "~2.3.1",
     "vue-tsc": "^0.0.8",
-    "windicss": "^3.0.0-beta.5"
+    "windicss": "^3.0.0-beta.5",
+    "husky": "^6.0.0"
   }
 }
