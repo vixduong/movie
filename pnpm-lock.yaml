@@ -17,6 +17,7 @@ specifiers:
   es6-shim: ^0.35.6
   eslint: ^7.25.0
   fp-ts: ^2.10.5
+  husky: ^6.0.0
   ky: ^0.27.0
   plyr: ^3.6.7
   reflect-metadata: ^0.1.13
@@ -70,6 +71,7 @@ devDependencies:
   '@vitejs/plugin-vue': 1.2.2_@vue+compiler-sfc@3.0.11
   '@vue/compiler-sfc': 3.0.11_vue@3.0.11
   eslint: 7.25.0
+  husky: 6.0.0
   sass: 1.32.12
   sass-loader: 10.1.1_sass@1.32.12
   tailwindcss-font-inter: 2.0.5
@@ -2928,6 +2930,11 @@ packages:
       domhandler: 4.2.0
       domutils: 2.6.0
       entities: 2.2.0
+    dev: true
+
+  /husky/6.0.0:
+    resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
+    hasBin: true
     dev: true
 
   /icss-replace-symbols/1.1.0:

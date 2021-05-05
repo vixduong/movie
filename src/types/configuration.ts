@@ -1,11 +1,4 @@
-import { Expose, Type } from 'class-transformer';
-
-export class Configuration {
-  @Type(() => ImageConfig)
-  images!: ImageConfig;
-  @Expose({ name: 'change_keys' })
-  changeKeys!: Array<string>;
-}
+import { Expose, Type } from 'class-transformer'
 
 export enum Size {
   'w45' = 'w45', 'w92' = 'w92',
@@ -17,20 +10,30 @@ export enum Size {
 
 export class ImageConfig {
   @Expose({ name: 'base_url' })
-  baseUrl: string;
+  baseUrl: string
+
   @Expose({ name: 'secure_base_url' })
-  secureBaseUrl: string;
+  secureBaseUrl: string
+
   @Expose({ name: 'backdrop_sizes' })
-  backdropSizes: Array<Size>;
+  backdropSizes: Array<Size>
+
   @Expose({ name: 'logo_sizes' })
-  logoSizes: Array<Size>;
+  logoSizes: Array<Size>
+
   @Expose({ name: 'poster_sizes' })
-  posterSizes: Array<Size>;
+  posterSizes: Array<Size>
+
   @Expose({ name: 'profile_sizes' })
-  profileSizes: Array<Size>;
+  profileSizes: Array<Size>
+
   @Expose({ name: 'still_sizes' })
-  stillSizes: Array<Size>;
+  stillSizes: Array<Size>
 }
+export class Configuration {
+  @Type(() => ImageConfig)
+  images!: ImageConfig
 
-
-
+  @Expose({ name: 'change_keys' })
+  changeKeys!: Array<string>
+}

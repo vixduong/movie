@@ -5,7 +5,8 @@
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
-    "lint": "npx eslint --ext .js,.json,.vue --fix ."
+    "lint": "npx eslint --ext .js,.ts,.json,.vue --fix .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -35,6 +36,7 @@
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.11",
     "eslint": "^7.25.0",
+    "husky": "^6.0.0",
     "sass": "^1.32.12",
     "sass-loader": "^10.1.1",
     "tailwindcss-font-inter": "^2.0.5",

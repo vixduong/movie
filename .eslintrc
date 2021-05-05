@@ -1,3 +1,9 @@
 {
-  "extends": "@antfu"
+  "extends": "@antfu",
+  "rules": {
+    "indent": "off",
+    "no-unused-vars": "off",
+    // "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-var-requires": "off"
+  }
 }
