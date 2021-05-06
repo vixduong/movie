@@ -11,12 +11,26 @@
     <div
       v-if="show"
       ref="el"
-      bg="gray opacity-30" position="inset-0 absolute" z="50" h="screen" flex="col" class="flex"
+      bg="gray opacity-30"
+      position="inset-0 absolute"
+      z="50"
+      h="screen"
+      flex="col"
+      class="flex"
     >
       <div position="relative" w="full">
         <button
           aria-label="close modal"
-          bg="gray opacity-10" border="rounded-full" h="8" position="top-4 right-4 absolute" w="8" z="60" justify="center" align="items-center" ring="2 red" class="flex"
+          bg="gray opacity-10"
+          border="rounded-full"
+          h="8"
+          position="top-4 right-4 absolute"
+          w="8"
+          z="60"
+          justify="center"
+          align="items-center"
+          ring="2 red"
+          class="flex"
           @click.prevent="toggleModal()"
         >
           <svg viewBox="0 0 24 24" h="6" svg="stroke-red stroke-2" w="6">

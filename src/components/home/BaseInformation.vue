@@ -6,7 +6,9 @@
         p="rose-lg rose-white"
         display="overflow-hidden"
         class="line-clamp-4"
-      >{{ trending?.overview }}</p>
+      >
+        {{ trending?.overview }}
+      </p>
     </div>
   </Transition>
 
@@ -17,7 +19,9 @@
         text="right 9xl uppercase"
         p="rose-white"
         class="line-clamp-2"
-      >{{ trending?.show }}</h2>
+      >
+        {{ trending?.show }}
+      </h2>
     </div>
   </Transition>
 
@@ -30,7 +34,9 @@
       ring="4 red"
       title="trainer"
       @click.prevent="toggleModal()"
-    >trainer</button>
+    >
+      trainer
+    </button>
     <button
       title="share society"
       border="white rounded 2"

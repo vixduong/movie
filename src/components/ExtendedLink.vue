@@ -24,7 +24,9 @@
           position="relative"
           class="link__item"
         >
-          <RouterLink :to="link?.href ?? '#'" active-class="text-white">{{ link?.name }}</RouterLink>
+          <RouterLink :to="link?.href ?? '#'" active-class="text-white">
+            {{ link?.name }}
+          </RouterLink>
           <span
             bg="gradient-to-r"
             gradient="from-black to-white"

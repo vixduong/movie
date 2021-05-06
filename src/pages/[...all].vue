@@ -7,7 +7,16 @@
     </FullScreen>
 
     <FullScreen justify="center" class="flex">
-      <div h="full" space="x-4" text="white 7xl" w="full" m="ax-w-70 s:ax-w-100" align="items-center" justify="center" class="flex">
+      <div
+        h="full"
+        space="x-4"
+        text="white 7xl"
+        w="full"
+        m="ax-w-70 s:ax-w-100"
+        align="items-center"
+        justify="center"
+        class="flex"
+      >
         <span>40</span>
         <span flex="1" position="relative" class="line"></span>
         <span>4</span>

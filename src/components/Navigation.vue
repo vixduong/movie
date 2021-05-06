@@ -16,25 +16,43 @@
       overflow="-sm:y-scroll"
     >
       <ul
-        flex="col" h="screen" m="ax-w--ax" space="y-5" p="y-16 l-20" class="flex overflow-y-scroll scrollbar-hide"
+        flex="col"
+        h="screen"
+        m="ax-w--ax"
+        space="y-5"
+        p="y-16 l-20"
+        class="flex overflow-y-scroll scrollbar-hide"
       >
         <li
           v-for="(link, i) in routers"
           :key="i"
-          text="black 2xl opacity-80 lowercase sm:4xl" position="relative" class="link__item hover:(text-white)"
+          text="black 2xl opacity-80 lowercase sm:4xl"
+          position="relative"
+          class="link__item hover:(text-white)"
         >
           <RouterLink :to="link?.href ?? '#'" active-class="text-white">
             {{ link?.name }}
           </RouterLink>
           <span
-            bg="gradient-to-r" gradient="from-black to-white" h="1" transition="transform" position="inset-0 top-1/2 absolute" w="18" transform="translate-y-1/2 -translate-x-40" class="flex transform"
+            bg="gradient-to-r"
+            gradient="from-black to-white"
+            h="1"
+            transition="transform"
+            position="inset-0 top-1/2 absolute"
+            w="18"
+            transform="translate-y-1/2 -translate-x-40"
+            class="flex transform"
           />
         </li>
       </ul>
 
       <button
         aria-label="close a nav"
-        h="8" position="top-4 right-4 absolute" w="8" bg="opacity-20" class="focus:(outline-none)"
+        h="8"
+        position="top-4 right-4 absolute"
+        w="8"
+        bg="opacity-20"
+        class="focus:(outline-none)"
         @click.prevent="toggleNavigation()"
       >
         <svg viewBox="0 0 24 24" svg="stroke-white stroke-2">

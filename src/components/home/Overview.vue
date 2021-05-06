@@ -8,7 +8,9 @@
         <div flex="col" space="y-16" w="full" class="flex">
           <h3>
             <span
-              border="white b-2" font="bold" text="2xl red"
+              border="white b-2"
+              font="bold"
+              text="2xl red"
             >Casts & Crew</span>
           </h3>
           <VideoTrainer :key="key" />
