@@ -1,14 +1,14 @@
 <template>
   <div position="top-0 z-30 fixed" w="full" transition="all">
-    <header class="flex text-white py-4 px-10 align-middle justify-between">
+    <header text="white align-middle" p="y-4 x-10" justify="between" class="flex">
       <div title="menu icon " role="button" @click.prevent="toggleNavigation">
-        <svg id="stats" viewBox="0 0 24 24" class="h-8 stroke-white stroke-2 w-8">
+        <svg id="stats" viewBox="0 0 24 24" h="8" svg="stroke-white stroke-2" w="8">
           <path d="M6 7L15 7M6 12L18 12M6 17L12 17" />
         </svg>
       </div>
-      <div class="flex-1">
-        <div class="flex h-full justify-center items-center">
-          <span class="font-bold leading-3 uppercase">__CINEMA</span>
+      <div flex="1">
+        <div h="full" justify="center" align="items-center" class="flex">
+          <span font="bold leading-3" text="uppercase">__CINEMA</span>
         </div>
       </div>
       <div>3</div>

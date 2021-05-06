@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-gray flex h-screen bg-opacity-60 justify-center items-center">
-    <div class="flex w-8/10 lg:space-x-32">
-      <div class="flex-auto space-y-5 md:flex-1/2">
+  <div bg="gray opacity-60" h="screen" justify="center" align="items-center" class="flex">
+    <div w="8/10" space="lg:x-32" class="flex">
+      <div flex="auto md:1/2" space="y-5">
         <BaseInformation :key="key" />
       </div>
-      <div class="flex-1/2 hidden md:block">
-        <div class="flex flex-col space-y-16 w-full">
+      <div flex="1/2" display="hidden md:block">
+        <div flex="col" space="y-16" w="full" class="flex">
           <h3>
             <span
-              class="border-white font-bold border-b-2 text-2xl hover:(border-red text-red text-opacity-80)"
+              border="white b-2" font="bold" text="2xl red"
             >Casts & Crew</span>
           </h3>
           <VideoTrainer :key="key" />

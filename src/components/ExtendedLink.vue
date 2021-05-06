@@ -9,29 +9,45 @@
   >
     <nav
       v-if="stateNavigation"
-      class="bg-gray h-screen bg-opacity-90 w-screen inset-0 z-50 absolute -sm:overflow-y-scroll"
+      bg="gray opacity-90"
+      h="screen"
+      w="screen"
+      position="inset-0 absolute"
+      z="50"
+      class="-sm:overflow-y-scroll"
     >
-      <ul class="flex flex-col max-w-max space-y-5 py-16 pl-20">
+      <ul flex="~ col" w="max-max" space="y-5" p="y-16 l-20">
         <li
           v-for="(link, i) in links"
           :key="i"
-          class="text-black text-2xl text-opacity-80 relative link__item lowercase sm:text-4xl hover:(text-white)"
+          text="black 2xl opacity-80 lowercase sm:4xl hover:white"
+          position="relative"
+          class="link__item"
         >
-          <RouterLink :to="link?.href ?? '#'" active-class="text-white">
-            {{ link?.name }}
-          </RouterLink>
+          <RouterLink :to="link?.href ?? '#'" active-class="text-white">{{ link?.name }}</RouterLink>
           <span
-            class="bg-gradient-to-r from-black to-white flex h-1 transform transition-transform inset-0 top-1/2 w-18 translate-y-1/2 -translate-x-40 absolute"
+            bg="gradient-to-r"
+            gradient="from-black to-white"
+            h="1"
+            transition="transform"
+            position="inset-0 top-1/2 absolute"
+            w="18"
+            transform="translate-y-1/2 -translate-x-40"
+            class="flex transform"
           />
         </li>
       </ul>
 
       <button
         aria-label="close a nav"
-        class="h-8 top-4 right-4 w-8 absolute hover:(bg-white bg-opacity-20 rounded-full) focus:(outline-none)"
+        h="8"
+        position="top-4 right-4 absolute"
+        w="8"
+        bg="opacity-20"
+        class="focus:(outline-none)"
         @click.prevent="toggleNavigation()"
       >
-        <svg viewBox="0 0 24 24" class="stroke-white stroke-2">
+        <svg viewBox="0 0 24 24" svg="stroke-white stroke-2">
           <path
             d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"
           />

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-320px sm:w-600px md:w-700px lg:w-960px m-auto">
+  <div w="320px sm:600px md:700px lg:960px" m="auto">
     <div ref="el" playsinline :data-plyr-provider="provider" :data-plyr-embed-id="embedId"></div>
   </div>
 </template>

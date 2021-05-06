@@ -6,12 +6,11 @@ import '@splidejs/splide/dist/css/splide.min.css'
 
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import routes from 'virtual:generated-pages'
 
 import { store } from '@/stores'
 import VueLazyLoad from 'vue-lazy-loading'
 import App from './App.vue'
-
-import { routes } from './routes'
 
 const router = createRouter({
   history: createWebHistory(),

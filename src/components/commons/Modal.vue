@@ -11,15 +11,15 @@
     <div
       v-if="show"
       ref="el"
-      class="bg-gray bg-opacity-30 inset-0 z-50 absolute flex h-screen flex-col"
+      bg="gray opacity-30" position="inset-0 absolute" z="50" h="screen" flex="col" class="flex"
     >
-      <div class="relative w-full">
+      <div position="relative" w="full">
         <button
           aria-label="close modal"
-          class="bg-gray rounded-full flex bg-opacity-10 h-8 top-4 right-4 w-8 z-60 absolute justify-center items-center focus:(outline-none ring-2 ring-red ring-opacity-20)"
+          bg="gray opacity-10" border="rounded-full" h="8" position="top-4 right-4 absolute" w="8" z="60" justify="center" align="items-center" ring="2 red" class="flex"
           @click.prevent="toggleModal()"
         >
-          <svg viewBox="0 0 24 24" class="h-6 stroke-red stroke-2 w-6">
+          <svg viewBox="0 0 24 24" h="6" svg="stroke-red stroke-2" w="6">
             <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"></path>
           </svg>
         </button>
@@ -31,7 +31,6 @@
 <script lang="ts">
 import { computed, defineComponent, ref, watch } from 'vue'
 import { useStore } from 'vuex'
-import { useWindowSize } from '@vueuse/core'
 
 export default defineComponent({
   setup() {
@@ -43,7 +42,7 @@ export default defineComponent({
     const toggleModal = () => store.dispatch('setting/toggleModal', {})
     watch(() => modal.value, v => show.value = v)
 
-    const enterTransition = (_el: HTMLElement) => {
+    const enterTransition = (_el: Element) => {
       _el.addEventListener('click', (e) => {
         el.value === e.target && toggleModal()
       })

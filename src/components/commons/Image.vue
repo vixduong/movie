@@ -4,7 +4,7 @@
     class="aspect-w-16 aspect-h-9"
     :style="[`--tw-aspect-w: ${width ?? 16}`, `--tw-aspect-h: ${height ?? 9}`]"
   >
-    <img v-lazy="urlImage" :alt="alt" :width="width" :height="height" class="object-cover" />
+    <img v-lazy="urlImage" :alt="alt" :width="width" :height="height" object="cover" />
   </figure>
 </template>
 

@@ -1,35 +1,44 @@
 <template>
   <Transition :css="false" @enter="enterOverview">
-    <div v-if="show" class="flex opacity-0 justify-end">
-      <p class="w-7/10 prose-lg prose-white overflow-hidden line-clamp-4">
-        {{ trending?.overview }}
-      </p>
+    <div v-if="show" opacity="0" justify="end" class="flex">
+      <p
+        w="7/10"
+        p="rose-lg rose-white"
+        display="overflow-hidden"
+        class="line-clamp-4"
+      >{{ trending?.overview }}</p>
     </div>
   </Transition>
 
   <Transition :css="false" @enter="enterName">
-    <div v-if="show" class="opacity-0 prose-2xl">
+    <div v-if="show" opacity="0" p="rose-2xl">
       <h2
-        class="font-bold text-right text-9xl uppercase prose-white line-clamp-2"
-      >
-        {{ trending?.show }}
-      </h2>
+        font="bold"
+        text="right 9xl uppercase"
+        p="rose-white"
+        class="line-clamp-2"
+      >{{ trending?.show }}</h2>
     </div>
   </Transition>
 
-  <div class="flex justify-end">
+  <div justify="end" class="flex">
     <button
-      class="bg-red rounded text-lg py-2 px-9 uppercase focus:(outline-none ring-4 ring-red ring-opacity-20)"
+      bg="red"
+      border="rounded"
+      text="lg uppercase"
+      p="y-2 x-9"
+      ring="4 red"
       title="trainer"
       @click.prevent="toggleModal()"
-    >
-      trainer
-    </button>
+    >trainer</button>
     <button
       title="share society"
-      class="border-white rounded border-2 mx-6 py-1 px-2 focus:(outline-none)"
+      border="white rounded 2"
+      m="x-6"
+      p="y-1 x-2"
+      class="focus:(outline-none)"
     >
-      <svg id="share-android" viewBox="0 0 24 24" class="h-6 stroke-white stroke-2 w-6">
+      <svg id="share-android" viewBox="0 0 24 24" h="6" svg="stroke-white stroke-2" w="6">
         <path d="M16 8L8 11 16 8zM16 16L8 13 16 16z" />
         <circle cx="6" cy="12" r="2" />
         <circle cx="18" cy="7" r="2" />

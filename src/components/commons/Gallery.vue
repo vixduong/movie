@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div position="relative">
     <div ref="el" class="splide">
       <div class="splide__track">
         <ul class="splide__list">
@@ -8,7 +8,7 @@
           </li>
         </ul>
       </div>
-      <div v-if="showProgress" class="splide__progress absolute inset-0">
+      <div v-if="showProgress" position="absolute inset-0" class="splide__progress">
         <div class="splide__progress__bar"></div>
       </div>
     </div>

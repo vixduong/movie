@@ -1,10 +1,18 @@
 <template>
   <Transition :css="false" @enter="enter">
-    <div v-if="show && trending?.videos" class="flex overflow-hidden items-center">
+    <div
+      v-if="show && trending?.videos"
+      display="overflow-hidden"
+      align="items-center"
+      class="flex"
+    >
       <div
         v-for="(video, key) of trending?.videos"
         :key="video.id"
-        class="border-white rounded-full flex border-2 overflow-hidden justify-center hidden video__item"
+        border="white rounded-full 2"
+        display="overflow-hidden hidden"
+        justify="center"
+        class="flex video__item"
       >
         <Image
           :alt="trending.show"
