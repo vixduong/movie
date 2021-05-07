@@ -1,8 +1,8 @@
-import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
-import { RootState } from '@/stores/root.interface'
 import { http } from '@/api'
 import { Detail } from '@/types/detail'
+import { RootState } from '@/stores/root.interface'
 import { MovieResponse } from '@/types/movie-response'
+import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 
 export interface State {
   movie: Detail

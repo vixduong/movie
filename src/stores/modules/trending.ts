@@ -1,16 +1,15 @@
-import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
-import { RootState } from '@/stores/root.interface'
-import { http } from '@/api'
-import { Trending, TrendingResponse } from '@/types/trending'
-import { MediaType } from '@/types/media-type'
-import { TimeWindow } from '@/types/time-window'
-
 import * as TaskEither from 'fp-ts/TaskEither'
+import { http } from '@/api'
 import { pipe } from 'fp-ts/function'
-import { ImageResponse } from '@/types/image-response'
 import { Image } from '@/types/image'
 import { Video } from '@/types/video'
+import { MediaType } from '@/types/media-type'
+import { TimeWindow } from '@/types/time-window'
+import { RootState } from '@/stores/root.interface'
+import { ImageResponse } from '@/types/image-response'
 import { VideoResponse } from '@/types/video-response'
+import { Trending, TrendingResponse } from '@/types/trending'
+import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 
 export interface State {
   data: TrendingResponse

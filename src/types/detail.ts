@@ -1,9 +1,9 @@
+import { Genre } from '@/types/genre'
+import { Season } from '@/types/season'
 import { Company } from '@/types/company'
 import { Country } from '@/types/country'
 import { Language } from '@/types/language'
-import { Genre } from '@/types/genre'
 import { Expose, Type } from 'class-transformer'
-import { Season } from '@/types/season'
 
 export class Detail {
   adult: boolean

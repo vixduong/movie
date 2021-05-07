@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
+import { onBeforeMount } from 'vue'
 
 const store = useStore()
 const getConfig = async() => store.dispatch('configuration/get', {})

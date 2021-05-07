@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, defineComponent, defineProps, ref, watch } from 'vue'
 import { useStore } from 'vuex'
+import { computed, defineProps, ref, watch } from 'vue'
 import { Configuration, ImageConfig, Size as ImageSize } from '@/types/configuration'
 
 const props = defineProps({

@@ -66,9 +66,9 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
 import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
+import { computed, ref, watch } from 'vue'
 
 const routers = ref<Array<{ href: string; name: string }>>([
   { href: '/', name: 'Home' },

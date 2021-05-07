@@ -43,8 +43,8 @@
   </Transition>
 </template>
 <script lang="ts">
-import { computed, defineComponent, ref, watch } from 'vue'
 import { useStore } from 'vuex'
+import { computed, defineComponent, ref, watch } from 'vue'
 
 export default defineComponent({
   setup() {

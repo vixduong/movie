@@ -1,5 +1,5 @@
-import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 import { RootState } from '@/stores/root.interface'
+import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 
 export interface State {
   activeNavigation: Boolean

@@ -1,7 +1,7 @@
-import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
-import { RootState } from '@/stores/root.interface'
 import { http } from '@/api'
+import { RootState } from '@/stores/root.interface'
 import { Certification } from '@/types/certification'
+import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 
 export interface State {
   movie: Certification

@@ -1,8 +1,8 @@
-import { Expose, Type } from 'class-transformer'
-import { MediaType } from '@/types/media-type'
-import { Pagination } from '@/types/pagination'
 import { Video } from '@/types/video'
 import { Image } from '@/types/image'
+import { MediaType } from '@/types/media-type'
+import { Pagination } from '@/types/pagination'
+import { Expose, Type } from 'class-transformer'
 
 export class Trending {
   video?: boolean

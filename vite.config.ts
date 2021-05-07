@@ -1,12 +1,11 @@
 import * as path from 'path'
-import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import WindiCSS from 'vite-plugin-windicss'
-
 import Pages from 'vite-plugin-pages'
+import WindiCSS from 'vite-plugin-windicss'
 import Layouts from 'vite-plugin-vue-layouts'
 // import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
+import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/

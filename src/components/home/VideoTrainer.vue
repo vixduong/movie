@@ -25,10 +25,9 @@
   </Transition>
 </template>
 <script lang="ts" setup>
-import { computed, nextTick, ref } from 'vue'
 import { useStore } from 'vuex'
-
 import { Trending } from '@/types/trending'
+import { computed, nextTick, ref } from 'vue'
 import { useAnime } from '@/components/home/util'
 
 const show = ref(false)

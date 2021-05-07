@@ -15,9 +15,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { defineComponent, defineEmit, defineProps, nextTick, onMounted, ref, watch } from 'vue'
 import Splide from '@splidejs/splide'
 import type { PropType } from 'vue'
+import { defineEmit, defineProps, nextTick, onMounted, ref, watch } from 'vue'
 import type { ComponentConstructorCollection, SplideOptions, TransitionConstructor } from '@splidejs/splide'
 
 const props = defineProps({

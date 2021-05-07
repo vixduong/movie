@@ -1,5 +1,5 @@
-import { Type } from 'class-transformer'
 import { Image } from '@/types/image'
+import { Type } from 'class-transformer'
 
 export class ImageResponse {
   id: number

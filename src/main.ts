@@ -3,13 +3,12 @@ import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 import 'plyr/src/sass/plyr.scss'
 import '@splidejs/splide/dist/css/splide.min.css'
-
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-import routes from 'virtual:generated-pages'
-
-import { store } from '@/stores'
 import VueLazyLoad from 'vue-lazy-loading'
+import routes from 'virtual:generated-pages'
+import { createApp } from 'vue'
+import { store } from '@/stores'
+// eslint-disable-next-line pretty-imports/sorted
+import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 
 const router = createRouter({

@@ -23,11 +23,10 @@
   </Transition>
 </template>
 <script lang="ts" setup>
-import { computed, nextTick, ref } from 'vue'
-import { useStore } from 'vuex'
-
-import { Trending } from '@/types/trending'
 import anime from 'animejs'
+import { useStore } from 'vuex'
+import { Trending } from '@/types/trending'
+import { computed, nextTick, ref } from 'vue'
 
 const show = ref(false)
 const store = useStore()

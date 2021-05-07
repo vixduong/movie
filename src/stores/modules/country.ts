@@ -1,7 +1,7 @@
-import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
+import { http } from '@/api'
 import { Country } from '@/types/country'
 import { RootState } from '@/stores/root.interface'
-import { http } from '@/api'
+import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 
 export interface State {
   data: Country[]

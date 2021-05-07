@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts" setup>
-import type { SplideOptions } from '@splidejs/splide'
-import { computed, defineAsyncComponent, ref, watch } from 'vue'
-import { Trending } from '@/types/trending'
 import { useStore } from 'vuex'
+import { computed, ref, watch } from 'vue'
+import { Trending } from '@/types/trending'
+import type { SplideOptions } from '@splidejs/splide'
 
 const options = ref<SplideOptions>({
   lazyLoad: 'nearby',

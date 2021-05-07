@@ -4,9 +4,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { defineProps, onBeforeMount, onMounted, ref } from 'vue'
 import Plyr from 'plyr'
 import type { PropType } from 'vue'
+import { defineProps, onBeforeMount, onMounted, ref } from 'vue'
 
 const props = defineProps({
   options: {

@@ -54,9 +54,10 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed, defineComponent, nextTick, ref } from 'vue'
-import { Trending } from '@/types/trending'
 import { useStore } from 'vuex'
+import { Trending } from '@/types/trending'
+// eslint-disable-next-line pretty-imports/sorted
+import { computed, nextTick, ref } from 'vue'
 import { useAnime } from './util'
 
 const store = useStore()
