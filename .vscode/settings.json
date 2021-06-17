@@ -1,3 +1,7 @@
 {
-  "volar.tsPlugin": true
+  "volar.tsPlugin": true,
+  "i18n-ally.localesPaths": [],
+  "files.watcherExclude": {
+    "**/target": true
+  }
 }

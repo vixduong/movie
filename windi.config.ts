@@ -10,9 +10,6 @@ export default defineConfig({
       white: '#D6D6D6',
       gray: '#35353F',
     },
-    interFontFeatures: {
-      numeric: ['tnum', 'salt', 'ss02'],
-    },
     extend: {
       flex: {
         '1/2': '1 1 50%',
@@ -21,9 +18,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    require('tailwindcss-font-inter')({
-      importFontFace: false,
-    }),
     require('windicss/plugin/typography'),
     require('windicss/plugin/forms'),
     require('windicss/plugin/line-clamp'),

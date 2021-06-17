@@ -67,3 +67,4 @@ export class Detail {
   @Type(() => Season)
   seasons: Season[]
 }
+

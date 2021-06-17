@@ -1,5 +1,5 @@
 <template>
-  <div position="relative" font="inter" text="white" flex="~ col">
+  <div position="relative" text="white" flex="~ col">
     <!--  header  -->
     <Header />
     <!--  navigation  -->
